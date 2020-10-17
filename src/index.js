@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import animate from 'animate.css';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import animate from 'animate.css'
 
-import styles from './styles.module.css';
+import styles from './styles.css'
 
 const themes = {
   purple: ['#6D4B94', '#7C6497', '#6D4B943B'],
@@ -10,7 +10,7 @@ const themes = {
   blue: ['#5674E0', '#5674E0', '#5674E03B'],
   black: ['#303030', '#303030', '#3030303B'],
   white: ['#ffffff', '#ffffff', '#ffffff3B'],
-  cyan: ['#00BCDD', '#00BCDD', '#00BCDD3B'],
+  cyan: ['#00BCDD', '#00BCDD', '#00BCDD3B']
 };
 
 export default class Poll extends Component {
@@ -29,16 +29,16 @@ export default class Poll extends Component {
       questionBold: true,
       questionColor: '#303030',
       align: 'center',
-      theme: 'black',
+      theme: 'black'
     },
-    vote: '',
+    vote: ''
   };
 
   calculatePercent = (votes, total) => {
     if (votes === 0 && total === 0) {
       return '0%'
     }
-    return `${parseInt((votes / total) * 100)}%`;
+    return `${parseInt((votes / total) * 100)}%`
   };
 
   alignPoll = (customAlign) => {
